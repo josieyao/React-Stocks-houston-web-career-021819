@@ -9,6 +9,9 @@ class StockContainer extends Component {
         <h2>Stocks</h2>
         {
           //render the list of stocks here
+          this.props.unownedStocks.map( stock => { 
+            return <Stock {...stock} handleClick={this.props.handleClick}/>
+          })
         }
       </div>
     );
